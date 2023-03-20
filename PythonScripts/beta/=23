@@ -1,0 +1,11 @@
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.org/simple, https://www.piwheels.org/simple
+Requirement already satisfied: pyopenssl in /usr/lib/python3/dist-packages (20.0.1)
+Collecting pyopenssl
+  Downloading https://www.piwheels.org/simple/pyopenssl/pyOpenSSL-23.0.0-py3-none-any.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 262.2 kB/s eta 0:00:00
+Requirement already satisfied: cryptography<40,>=38.0.0 in /usr/local/lib/python3.9/dist-packages (from pyopenssl) (39.0.2)
+Requirement already satisfied: cffi>=1.12 in /usr/local/lib/python3.9/dist-packages (from cryptography<40,>=38.0.0->pyopenssl) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.9/dist-packages (from cffi>=1.12->cryptography<40,>=38.0.0->pyopenssl) (2.21)
+Installing collected packages: pyopenssl
+Successfully installed pyopenssl-23.0.0
