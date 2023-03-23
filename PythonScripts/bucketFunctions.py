@@ -1,6 +1,24 @@
 import os 
 import boto3
 
+#only downloads to the /Search/ file in the working directory at the moment
+#downloads specified key from a specified bucket's /public folder
+def download_file(bucket, download_key):
+
+    #specify client
+    client = boto3.client('s3', region_name='us-west-2')
+
+    #specity working directory
+    workingDirectory = os.path.dirname(os.path.abspath(__file__))
+
+    download_to_name = download_key
+    download_key = "public/" + download_key
+
+    download_to_folder = workingDirectory+"/search/"+download_to_name
+
+    client.download_file(bucket, download_key, download_to_folder)
+
+
 #uploads all images from the directory 'impath' to input parameter bucket
 #returns a list of all images uploaded
 def upload_files(bucket, upload_path):
